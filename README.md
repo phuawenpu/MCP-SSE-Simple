@@ -5,6 +5,8 @@ The simplest MCP server/client, chat and ask about the weather in *** city, *** 
 
 ```bash
 #1. Install dependencies Using uv (recommended)
+uv init
+uv add anthropic httpx fastapi uvicorn fastmcp mcp --dev
 uv sync
 
 #2. Export environment variable
@@ -14,7 +16,7 @@ export ANTHROPIC_API_KEY="your-actual-api-key-here"
 uv run uvicorn server:app --host 0.0.0.0 --port 8000 --reload
 
 #4. Start the Chat in another terminal
-uv run chat
+uv run python client.py
 ```
 ## Example output:
 🚀 Connected to MCP server and Claude
